@@ -1,0 +1,551 @@
+/* style.css */
+
+#root {
+  --text-color: #fff;
+  --bgr-color: rgba(16, 20, 22, 0.95);
+  --border-color: #bbe633;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Alata", sans-serif;
+  font-weight: 100;
+  margin: 0;
+}
+
+body {
+  background-color: #263238;
+}
+
+.wrapper {
+  height: 100vh;
+}
+
+/* phần thanh công cụ */
+.header {
+  width: 100%;
+  height: 65px;
+  background-color: rgba(16, 20, 22, 0.95);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+.container__home {
+  margin-right: 20px;
+  padding: 15px 5px;
+  color: red;
+}
+
+.container__menu {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  height: 65px;
+  padding: 0;
+  margin-right: 30px;
+}
+
+.container__menu li {
+  padding: 5px 8px;
+  color: #fff;
+  font-size: 95%;
+  cursor: pointer;
+  position: relative;
+  font-size: 90%;
+}
+
+.container__menu-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  width: 0%;
+  height: 3px;
+  background-color: #bbe633;
+  transition: width 0.3s ease;
+}
+
+.container__menu-item:hover::before {
+  width: 100%;
+}
+
+.types:hover #types,
+.top-animes:hover #top-animes,
+.categories:hover #categories,
+.years:hover #years {
+  display: flex;
+}
+
+.list {
+  position: absolute;
+  top: 110%;
+  left: 7px;
+  min-width: 390px;
+  background-color: #fff;
+  display: none;
+  flex-flow: wrap row;
+  z-index: 999;
+  list-style-type: none;
+  padding: 0;
+  border-top: 3px solid #bbe633;
+  animation: show 0.2s ease-in-out alternate;
+  padding: 7px 0 10px 10px;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.list li {
+  color: #000;
+  flex-grow: 1;
+  padding: 10px 0 10px 5px;
+  width: 30%;
+  transition: opacity 0.3s ease;
+}
+
+.list li:hover {
+  opacity: 0.6;
+}
+
+.container__search {
+  border: 1px solid #1c2327;
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  height: 40px;
+  padding: 0 10px;
+}
+
+.container__search i {
+  color: #ccc;
+}
+
+.container__search-input {
+  outline: none;
+  border: none;
+  background-color: #0b0e0f;
+  color: #fff;
+  caret-color: #fff;
+  font-weight: bold;
+  min-width: 200px;
+  padding: 0 10px;
+}
+
+.container__search-input::placeholder {
+  transition: color 0.3s ease;
+}
+
+/* set chữ cho placeholder khi focus input*/
+.container__search-input:focus::placeholder {
+  color: #fff;
+}
+
+.container__btn {
+  outline: none;
+  border: none;
+  margin-left: 10px;
+  height: 40px;
+  width: 100px;
+  background-color: #ae200b;
+  transition: background-color 0.3s ease;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.container__btn:hover {
+  background-color: #23527c;
+  cursor: pointer;
+}
+
+/* ------------ main từ đây ------- */
+.main {
+  background-color: rgba(16, 20, 22, 0.95);
+  width: 75%;
+  height: 1000px;
+  margin: 0 auto;
+  padding-top: 10px;
+  margin-top: 15px;
+}
+
+/* phần thông báo đầu trang */
+.notification {
+  background-color: #2d2d2d;
+  width: 97%;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.notification__header {
+  margin-top: 5px;
+  margin-left: 10px;
+  display: inline-block;
+  background-color: red;
+  padding: 5px;
+  border-radius: 100%;
+}
+
+.notification__header i {
+  color: #fff;
+}
+
+.notification__content {
+  background-color: #392f2f;
+  width: 93%;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.item {
+  font-size: 90%;
+  background-color: #453b3a;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item__content {
+  margin-left: 10px;
+}
+
+.item__content-title {
+  font-weight: bold;
+}
+
+.item__link {
+  margin-right: 10px;
+}
+
+.item__link a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 85%;
+  transition: opacity 0.2s ease;
+}
+
+.item__link-web {
+  background-color: #f45044;
+}
+
+.item__link-facebook {
+  background-color: #4768b5;
+}
+
+.item__link-discord {
+  background-color: #758add;
+}
+
+.item__link-download {
+  background-color: #8dd310;
+}
+
+.item__link-web:hover,
+.item__link-facebook:hover,
+.item__link-discord:hover,
+.item__link-download:hover {
+  opacity: 0.7;
+}
+
+/* top trend anime */
+.trends {
+  position: relative;
+  width: 97%;
+  margin: 0 auto;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.trends__card {
+  position: relative;
+  width: 130px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.trends__card img {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  object-fit: cover;
+  flex: 1;
+}
+
+.trends__card-play {
+  /* display: none; */
+  opacity: 0;
+  /* transition: display 0.3s ease; */
+  transition: opacity 0.4s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 13px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.trends__card-play i {
+  color: #fff;
+}
+
+/* lớp nền đen phủ ảnh để tên anime đc hiện rõ */
+.trends__card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  transition: background-color 0.4s ease;
+}
+
+/* khi di chuột vào 1 card thì lớp nền đậm hơn */
+.trends__card:hover .trends__card-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* khi di chuột vào 1 card đồng thời hiện nút play */
+.trends__card:hover .trends__card-play {
+  /* display: block; */
+  opacity: 1;
+}
+
+/* khi di chuột vào 1 card đồng thời ẩn tên anime */
+.trends__card:hover .trends__card-title {
+  opacity: 0;
+}
+
+.trends__card-rating {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #f4eb26;
+  font-size: 80%;
+  z-index: 2;
+}
+
+.trends__card-episode {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 75%;
+  word-wrap: break-word;
+  max-width: 40px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0.7);
+  padding: 3px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.trends__card-title {
+  opacity: 1;
+  transition: opacity 0.4 ease;
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  padding: 0 10px;
+  width: 100%;
+  font-size: 85%;
+  color: #fff;
+}
+
+/* phần nội dung chính của trang 
+danh sách các anime */
+.content {
+  display: flex;
+  gap: 30px;
+  width: 97%;
+  margin: 0 auto;
+}
+
+.content__anime {
+  flex: 3;
+  background-color: red;
+}
+
+.content__anime-top {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  animation: slide 15s infinite ease-in-out;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  20% {
+    transform: translateX(0%);
+  } /* Giữ ảnh 1 */
+  25% {
+    transform: translateX(-33.33%);
+  } /* Lướt sang ảnh 2 */
+  45% {
+    transform: translateX(-33.33%);
+  } /* Giữ ảnh 2 */
+  50% {
+    transform: translateX(-66.66%);
+  } /* Lướt sang ảnh 3 */
+  70% {
+    transform: translateX(-66.66%);
+  } /* Giữ ảnh 3 */
+  75% {
+    transform: translateX(0%);
+  } /* Quay lại ảnh 1 */
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: calc(100% / 3);
+  flex-shrink: 0; /* không co */
+  height: 100%;
+}
+
+#anime1 {
+  background-image: url("https://finalweapon.net/wp-content/uploads/2025/01/Secrets-of-the-Silent-Witch-Anime-Airing-in-2025.jpg");
+}
+
+#anime2 {
+  background-image: url("https://www.anmosugoi.com/wp-content/uploads/2022/04/Kakkou-no-Iinazuke-anime-min-3.jpg");
+}
+
+#anime3 {
+  background-image: url("https://images.hdqwalls.com/download/sakamoto-days-wf-1280x720.jpg");
+}
+
+.card__overlay {
+  height: 100%;
+  width: 55%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 15px 20px;
+}
+
+.card__title {
+  color: #fff;
+  line-height: 30px;
+}
+
+.card__info {
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.card__info,
+.card__description,
+.card__studio,
+.card__categories {
+  font-size: 90%;
+}
+
+.card__info-rate {
+  color: #b6df35;
+}
+
+.card__info-episode,
+.card__info-year,
+.card__description,
+.card__studio span,
+.card__categories span,
+.card__btn {
+  color: #fff;
+}
+
+.card__description {
+  margin: 15px 0;
+}
+
+/* .card__studio {
+} */
+
+.card__studio i,
+.card__categories i {
+  color: #b6df35;
+}
+
+/* .card__categories {
+} */
+
+/* .card__seiyuus {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.card__seiyuus i {
+  font-size: 200%;
+} */
+
+.card__btn {
+  margin-top: 30px;
+  background-color: #ae200b;
+  outline: none;
+  border: none;
+  transition: background-color 0.3s ease;
+  border-radius: 3px;
+  width: 120px;
+  height: 40px;
+  border-radius: 3px;
+}
+
+.card__btn:hover {
+  background-color: #23527c;
+  cursor: pointer;
+}
+
+.card__btn i {
+  font-size: 90%;
+  margin-right: 5px;
+}
+
+.content__stuff {
+  flex: 1.2;
+  background-color: green;
+}

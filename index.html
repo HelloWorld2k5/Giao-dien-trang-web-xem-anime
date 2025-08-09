@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime Vietsub Online</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&display=swap'"
+    />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="container">
+          <a href="./index.html" class="container__home">AVietsubHome</a>
+
+          <ul class="container__menu">
+            <li class="container__menu-item">TRANG CHỦ</li>
+            <li class="container__menu-item types">
+              DẠNG ANIME
+              <ul id="types" class="list">
+                <li class="list__item">Tv/Series</li>
+                <li class="list__item">Movie/OVA</li>
+                <li class="list__item">HH Trung Quốc</li>
+                <li class="list__item">Anime Sắp Chiếu</li>
+                <li class="list__item">Anime Đang Chiếu</li>
+                <li class="list__item">Anime Trọn Bộ</li>
+              </ul>
+            </li>
+            <li class="container__menu-item top-animes">
+              TOP ANIME
+              <ul id="top-animes" class="list">
+                <li class="list__item">Theo Ngày</li>
+                <li class="list__item">Theo Tuần</li>
+                <li class="list__item">Theo Tháng</li>
+                <li class="list__item">Theo Năm</li>
+              </ul>
+            </li>
+            <li class="container__menu-item categories">
+              THỂ LOẠI
+              <ul id="categories" class="list">
+                <li class="list__item">Action</li>
+                <li class="list__item">Adventure</li>
+                <li class="list__item">Cartoon</li>
+                <li class="list__item">Comedy</li>
+                <li class="list__item">Dementia</li>
+                <li class="list__item">Demons</li>
+                <li class="list__item">Drama</li>
+                <li class="list__item">Ecchi</li>
+                <li class="list__item">Fantasy</li>
+                <li class="list__item">Game</li>
+                <li class="list__item">Harem</li>
+                <li class="list__item">Historical</li>
+                <li class="list__item">Horror</li>
+                <li class="list__item">Josei</li>
+                <li class="list__item">Kids</li>
+              </ul>
+            </li>
+            <li class="container__menu-item years">
+              SEASON
+              <ul id="years" class="list">
+                <li class="list__item">Mùa Hè 2025</li>
+                <li class="list__item">Mùa Xuân 2025</li>
+                <li class="list__item">Mùa Đông 2024</li>
+                <li class="list__item">Mùa Thu 2024</li>
+                <li class="list__item">Mùa Hè 2024</li>
+                <li class="list__item">Mùa Xuân 2024</li>
+                <li class="list__item">Mùa Đông 2023</li>
+                <li class="list__item">Mùa Thu 2023</li>
+                <li class="list__item">Mùa Hè 2023</li>
+                <li class="list__item">Mùa Xuân 2023</li>
+              </ul>
+            </li>
+            <li class="container__menu-item">THƯ VIỆN</li>
+            <li class="container__menu-item">LỊCH CHIẾU</li>
+          </ul>
+
+          <div class="container__search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text"
+              class="container__search-input"
+              placeholder="Tìm: tên tiếng nhật,anh,việt"
+            />
+          </div>
+
+          <button class="container__btn">Đăng nhập</button>
+        </div>
+      </div>
+
+      <main class="main">
+        <div class="notification">
+          <div class="notification__header">
+            <i class="fa-solid fa-flag"></i>
+          </div>
+          <div class="notification__content">
+            <div class="item">
+              <div class="item__content">
+                <span class="item__content-title">LINK RÚT GỌN</span>
+                <p>Lưu lại để truy cập khi nhà mạng chặn!</p>
+              </div>
+              <div class="item__link">
+                <a
+                  class="item__link-web"
+                  rel="noopener noreferrer"
+                  href="https://www.facebook.com/truong.nguyenthe.7334"
+                  target="_blank"
+                  >bit.ly/animevietsub.tv</a
+                >
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item__content">
+                <span class="item__content-title">CỘNG ĐỒNG</span>
+                <p>Tham gia để ủng hộ AnimeVietsub!</p>
+              </div>
+              <div class="item__link">
+                <a
+                  class="item__link-facebook"
+                  rel="noopener noreferrer"
+                  href="https://www.facebook.com/truong.nguyenthe.7334"
+                  target="_blank"
+                  >Facebook</a
+                >
+                <a
+                  class="item__link-discord"
+                  rel="noopener noreferrer"
+                  href="https://www.facebook.com/truong.nguyenthe.7334"
+                  target="_blank"
+                  >Discord</a
+                >
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item__content">
+                <span class="item__content-title">KHÔI PHỤC DỮ LIỆU</span>
+                <p>Lấy lại lịch sử xem & đăng nhập từ tên miền cũ</p>
+              </div>
+              <div class="item__link">
+                <a
+                  class="item__link-download"
+                  rel="noopener noreferrer"
+                  href="https://www.facebook.com/truong.nguyenthe.7334"
+                  target="_blank"
+                  >TẢI NGAY</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="trends">
+          <div
+            class="trends__card"
+            title="Tate no Yuusha no Nariagari Season 4"
+            onclick="watch()"
+          >
+            <img
+              src="https://cdn.animevietsub.cam/data/poster/2025/07/09/animevsub-gLk5VwvPrm.jpg"
+              alt="anime1"
+            />
+            <div class="trends__card-play">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <div class="trends__card-overlay"></div>
+            <div class="trends__card-rating">
+              <i class="fa-solid fa-star"></i>8.8
+            </div>
+            <div class="trends__card-episode">TẬP 05</div>
+            <p class="trends__card-title">
+              Tate no Yuusha no Nariagari Season 4
+            </p>
+          </div>
+
+          <div class="trends__card" title="Dadadan Season 2" onclick="watch()">
+            <img
+              src="https://cdn.animevietsub.cam/data/poster/2025/07/03/animevsub-ohdr6Xaomy.jpg"
+              alt="anime2"
+            />
+            <div class="trends__card-play">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <div class="trends__card-overlay"></div>
+            <div class="trends__card-rating">
+              <i class="fa-solid fa-star"></i>9.0
+            </div>
+            <div class="trends__card-episode">TẬP 12</div>
+            <p class="trends__card-title">Dadadan Season 2</p>
+          </div>
+
+          <div class="trends__card" title="Dr.Stone Season 4" onclick="watch()">
+            <img
+              src="https://cdn.animevietsub.cam/data/poster/2024/11/30/animevsub-8tbxYXLjm5.jpg"
+              alt="anime3"
+            />
+            <div class="trends__card-play">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <div class="trends__card-overlay"></div>
+            <div class="trends__card-rating">
+              <i class="fa-solid fa-star"></i>10.0
+            </div>
+            <div class="trends__card-episode">TẬP 02</div>
+            <p class="trends__card-title">Dr.Stone Season 4</p>
+          </div>
+
+          <div
+            class="trends__card"
+            title="Chuyển Sinh Thành Thất Hoàng Tử"
+            onclick="watch()"
+          >
+            <img
+              src="https://cdn.animevietsub.cam/data/poster/2025/07/09/animevsub-CjvpCy6voX.jpg"
+              alt="anime4"
+            />
+            <div class="trends__card-play">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <div class="trends__card-overlay"></div>
+            <div class="trends__card-rating">
+              <i class="fa-solid fa-star"></i>9.5
+            </div>
+            <div class="trends__card-episode">TẬP 24</div>
+            <p class="trends__card-title">Chuyển Sinh Thành Thất Hoàng Tử</p>
+          </div>
+
+          <div class="trends__card" title="Sát Thủ Về Hưu" onclick="watch()">
+            <img
+              src="https://cdn.animevietsub.cam/data/poster/2025/06/03/animevsub-mp7KCGFVLm.jpg"
+              alt="anime5"
+            />
+            <div class="trends__card-play">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <div class="trends__card-overlay"></div>
+            <div class="trends__card-rating">
+              <i class="fa-solid fa-star"></i>8.5
+            </div>
+            <div class="trends__card-episode">TẬP 08</div>
+            <p class="trends__card-title">Sát Thủ Về Hưu</p>
+          </div>
+
+          <div
+            class="trends__card"
+            title="Chuyện Tình Cúc Cu"
+            onclick="watch()"
+          >
+            <img
+              src="https://cdn.animevietsub.cam/data/poster/2025/07/08/animevsub-RiUU2G7qtj.jpg"
+              alt="anime6"
+            />
+            <div class="trends__card-play">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <div class="trends__card-overlay"></div>
+            <div class="trends__card-rating">
+              <i class="fa-solid fa-star"></i>9.2
+            </div>
+            <div class="trends__card-episode">TẬP 06</div>
+            <p class="trends__card-title">Chuyện Tình Cúc Cu</p>
+          </div>
+
+          <div class="trends__card" title="Thanh Kiếm Quỷ" onclick="watch()">
+            <img
+              src="https://cdn.animevietsub.cam/data/poster/2025/08/04/animevsub-CZSm3VYzzg.jpg"
+              alt="anime7"
+            />
+            <div class="trends__card-play">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <div class="trends__card-overlay"></div>
+            <div class="trends__card-rating">
+              <i class="fa-solid fa-star"></i>8.8
+            </div>
+            <div class="trends__card-episode">TẬP 04</div>
+            <p class="trends__card-title">Thanh Kiếm Quỷ</p>
+          </div>
+
+          <div class="trends__card" title="One Piece" onclick="watch()">
+            <img
+              src="https://cdn.animevietsub.cam/data/poster/2019/09/27/animevsub-sQCBqYz9ve.jpg"
+              alt="anime8"
+            />
+            <div class="trends__card-play">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <div class="trends__card-overlay"></div>
+            <div class="trends__card-rating">
+              <i class="fa-solid fa-star"></i>9.1
+            </div>
+            <div class="trends__card-episode">TẬP 999</div>
+            <p class="trends__card-title">One Piece</p>
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="content__anime">
+            <div class="content__anime-top">
+              <div class="slides">
+                <div class="card" id="anime1">
+                  <div class="card__overlay">
+                    <h1 class="card__title">Bí Mật Của Phù Thuỷ Tĩnh Lặng</h1>
+
+                    <ul class="card__info">
+                      <li class="card__info-rate">
+                        <i class="fa-solid fa-star"></i>1265
+                      </li>
+                      <li class="card__info-episode">
+                        <i class="fa-regular fa-clock"></i>06/13
+                      </li>
+                      <li class="card__info-year">
+                        <i class="fa-regular fa-calendar"></i>2025
+                      </li>
+                    </ul>
+
+                    <p class="card__description">
+                      Pháp sư thiên tài Monica Everett là một cô gái cực kỳ nhút
+                      nhát và ngại giao tiếp trước đám đông. Sau bao nhiêu...
+                    </p>
+
+                    <p class="card__studio">
+                      <i class="fa-solid fa-video"></i>
+                      <span>Studio: Studio Gokumi</span>
+                    </p>
+
+                    <p class="card__categories">
+                      <i class="fa-solid fa-clapperboard"></i>
+                      <span>Thể Loại: Fantasy, Adventure, Magic</span>
+                    </p>
+
+                    <div class="card__seiyuus">
+                      <!-- <i class="fa-solid fa-circle-user"></i>
+                      <i class="fa-solid fa-circle-user"></i>
+                      <i class="fa-solid fa-circle-user"></i>
+                      <i class="fa-solid fa-circle-user"></i>
+                      <i class="fa-solid fa-circle-user"></i> -->
+                    </div>
+
+                    <button class="card__btn" onclick="watch()">
+                      <i class="fa-solid fa-play"></i>
+                      <span>Xem Phim</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="card" id="anime2">
+                  <div class="card__overlay">
+                    <h1 class="card__title">Hôn Thê Cúc Cu</h1>
+
+                    <ul class="card__info">
+                      <li class="card__info-rate">
+                        <i class="fa-solid fa-star"></i>489
+                      </li>
+                      <li class="card__info-episode">
+                        <i class="fa-regular fa-clock"></i>04/13
+                      </li>
+                      <li class="card__info-year">
+                        <i class="fa-regular fa-calendar"></i>2025
+                      </li>
+                    </ul>
+
+                    <p class="card__description">
+                      Siêu học sinh 16 tuổi Nagi Umino, học sinh năm thứ hai tại
+                      trường trung học Meguro River Academy, đã bị đánh tráo khi
+                      mới sinh. Trên đường đi ăn tối...
+                    </p>
+
+                    <p class="card__studio">
+                      <i class="fa-solid fa-video"></i>
+                      <span>Studio: Okuruto Noburo</span>
+                    </p>
+
+                    <p class="card__categories">
+                      <i class="fa-solid fa-clapperboard"></i>
+                      <span>Thể Loại: Comedy, School, Harem, Romance</span>
+                    </p>
+
+                    <div class="card__seiyuus"></div>
+
+                    <button class="card__btn" onclick="watch()">
+                      <i class="fa-solid fa-play"></i>
+                      <span>Xem Phim</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="card" id="anime3">
+                  <div class="card__overlay">
+                    <h1 class="card__title">Sát Thủ Về Vườn</h1>
+
+                    <ul class="card__info">
+                      <li class="card__info-rate">
+                        <i class="fa-solid fa-star"></i>1393
+                      </li>
+                      <li class="card__info-episode">
+                        <i class="fa-regular fa-clock"></i>15/22
+                      </li>
+                      <li class="card__info-year">
+                        <i class="fa-regular fa-calendar"></i>2025
+                      </li>
+                    </ul>
+
+                    <p class="card__description">
+                      Thời gian trôi qua thật yên bình đối với Sakamoto kể từ
+                      khi anh ấy rời khỏi thế giới ngầm. Anh ấy đang điều hành
+                      một cửa hàng nhỏ trong khu phố...
+                    </p>
+
+                    <p class="card__studio">
+                      <i class="fa-solid fa-video"></i>
+                      <span>Studio: TMS Entertainment</span>
+                    </p>
+
+                    <p class="card__categories">
+                      <i class="fa-solid fa-clapperboard"></i>
+                      <span>Thể Loại: Comedy, Shounen, Action</span>
+                    </p>
+
+                    <div class="card__seiyuus"></div>
+
+                    <button class="card__btn" onclick="watch()">
+                      <i class="fa-solid fa-play"></i>
+                      <span>Xem Phim</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content__stuff"></div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
