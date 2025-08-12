@@ -175,7 +175,7 @@ body {
 .main {
   background-color: rgba(16, 20, 22, 0.95);
   width: 75%;
-  height: 1000px;
+  /* height: 1000px; */
   margin: 0 auto;
   padding-top: 10px;
   margin-top: 15px;
@@ -195,7 +195,7 @@ body {
   margin-top: 5px;
   margin-left: 10px;
   display: inline-block;
-  background-color: red;
+  background-color: #f31100;
   padding: 5px;
   border-radius: 100%;
 }
@@ -282,23 +282,20 @@ body {
 
 .trends__card {
   position: relative;
-  width: 130px;
   height: 200px;
   cursor: pointer;
+  flex: 1;
 }
 
 .trends__card img {
   width: 100%;
   height: 100%;
-  background-color: red;
   object-fit: cover;
-  flex: 1;
+  display: block;
 }
 
 .trends__card-play {
-  /* display: none; */
   opacity: 0;
-  /* transition: display 0.3s ease; */
   transition: opacity 0.4s ease;
   position: absolute;
   top: 50%;
@@ -307,7 +304,7 @@ body {
   padding: 13px;
   border: 3px solid #fff;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 10;
 }
 
@@ -318,12 +315,12 @@ body {
 /* lớp nền đen phủ ảnh để tên anime đc hiện rõ */
 .trends__card-overlay {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
   transition: background-color 0.4s ease;
 }
 
@@ -334,7 +331,6 @@ body {
 
 /* khi di chuột vào 1 card đồng thời hiện nút play */
 .trends__card:hover .trends__card-play {
-  /* display: block; */
   opacity: 1;
 }
 
@@ -394,7 +390,11 @@ danh sách các anime */
 
 .content__anime {
   flex: 3;
-  background-color: red;
+}
+
+.content__stuff {
+  flex: 1;
+  background-color: green;
 }
 
 .content__anime-top {
@@ -510,19 +510,6 @@ danh sách các anime */
   color: #b6df35;
 }
 
-/* .card__categories {
-} */
-
-/* .card__seiyuus {
-  display: flex;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.card__seiyuus i {
-  font-size: 200%;
-} */
-
 .card__btn {
   margin-top: 30px;
   background-color: #ae200b;
@@ -545,7 +532,93 @@ danh sách các anime */
   margin-right: 5px;
 }
 
-.content__stuff {
-  flex: 1.2;
-  background-color: green;
+/* đây là phần danh sách anime mới cập nhật */
+.content__anime-update {
+  margin-top: 10px;
+  padding: 10px 10px;
+  /* background-color: cyan; */
+}
+
+.header-update {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header-update__title {
+  background-color: #881735;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 8px;
+}
+
+.header-update__menu {
+  display: flex;
+  gap: 30px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.header-update__menu li {
+  color: #808080;
+  opacity: 1;
+  transition: opacity 0.3 ease;
+}
+
+#all:hover,
+#summer-2025:hover,
+#series:hover,
+#mono:hover,
+#donghua:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+#all {
+  color: red;
+}
+
+.anime-update {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.anime-update__item {
+  /* background-color: violet; */
+  height: 250px;
+}
+
+.anime-update__item:hover .anime-update__item-title {
+  color: #7d7d7d;
+}
+
+.anime-update__item img {
+  height: 80%;
+}
+
+.anime-update__item-play {
+  top: 40%;
+}
+
+.anime-update__item-overlay {
+  height: 80%;
+}
+
+.anime-update__item-title,
+.anime-update__item-view {
+  text-align: center;
+}
+
+.anime-update__item-title {
+  color: #fff;
+  margin-top: 5px;
+}
+
+.anime-update__item-view {
+  color: #7d7d7d;
+  font-size: 75%;
 }

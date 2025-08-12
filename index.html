@@ -4,11 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anime Vietsub Online</title>
+
+    <!-- Link dùng icon của fontawesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Link dùng font chữ -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Alata&display=swap'"
@@ -17,6 +21,7 @@
   </head>
   <body>
     <div class="wrapper">
+      <!-- Phần thanh công cụ -->
       <div class="header">
         <div class="container">
           <a href="./index.html" class="container__home">AVietsubHome</a>
@@ -95,12 +100,15 @@
         </div>
       </div>
 
+      <!-- Nội dung chính của trang web -->
       <main class="main">
+        <!-- Phần khung thông báo -->
         <div class="notification">
           <div class="notification__header">
             <i class="fa-solid fa-flag"></i>
           </div>
           <div class="notification__content">
+            <!-- Mỗi mục thông báo, tổng cộng 3 mục -->
             <div class="item">
               <div class="item__content">
                 <span class="item__content-title">LINK RÚT GỌN</span>
@@ -158,7 +166,9 @@
           </div>
         </div>
 
+        <!-- Những anime lên trends -->
         <div class="trends">
+          <!-- 1 thẻ anime, tổng cộng 8 thẻ -->
           <div
             class="trends__card"
             title="Tate no Yuusha no Nariagari Season 4"
@@ -302,10 +312,14 @@
           </div>
         </div>
 
+        <!-- Nội dụng trang -->
         <div class="content">
+          <!-- Danh sách anime -->
           <div class="content__anime">
+            <!-- Phần anime recommend, có hiệu ứng slide -->
             <div class="content__anime-top">
               <div class="slides">
+                <!-- 1 thẻ anime, tổng cộng 3 thẻ -->
                 <div class="card" id="anime1">
                   <div class="card__overlay">
                     <h1 class="card__title">Bí Mật Của Phù Thuỷ Tĩnh Lặng</h1>
@@ -336,14 +350,6 @@
                       <i class="fa-solid fa-clapperboard"></i>
                       <span>Thể Loại: Fantasy, Adventure, Magic</span>
                     </p>
-
-                    <div class="card__seiyuus">
-                      <!-- <i class="fa-solid fa-circle-user"></i>
-                      <i class="fa-solid fa-circle-user"></i>
-                      <i class="fa-solid fa-circle-user"></i>
-                      <i class="fa-solid fa-circle-user"></i>
-                      <i class="fa-solid fa-circle-user"></i> -->
-                    </div>
 
                     <button class="card__btn" onclick="watch()">
                       <i class="fa-solid fa-play"></i>
@@ -384,8 +390,6 @@
                       <span>Thể Loại: Comedy, School, Harem, Romance</span>
                     </p>
 
-                    <div class="card__seiyuus"></div>
-
                     <button class="card__btn" onclick="watch()">
                       <i class="fa-solid fa-play"></i>
                       <span>Xem Phim</span>
@@ -425,8 +429,6 @@
                       <span>Thể Loại: Comedy, Shounen, Action</span>
                     </p>
 
-                    <div class="card__seiyuus"></div>
-
                     <button class="card__btn" onclick="watch()">
                       <i class="fa-solid fa-play"></i>
                       <span>Xem Phim</span>
@@ -435,7 +437,127 @@
                 </div>
               </div>
             </div>
+
+            <!-- Phần anime mới cập nhật -->
+            <div class="content__anime-update">
+              <div class="header-update">
+                <h3 class="header-update__title">MỚI CẬP NHẬT</h3>
+
+                <ul class="header-update__menu">
+                  <li id="all">Tất cả</li>
+                  <li id="summer-2025">Mùa Hạ - 2025</li>
+                  <li id="series">Anime bộ</li>
+                  <li id="mono">Anime lẻ</li>
+                  <li id="donghua">HH Trung Quốc</li>
+                </ul>
+              </div>
+
+              <ul class="anime-update">
+                <li class="trends__card anime-update__item">
+                  <img
+                    src="https://cdn.animevietsub.cam/data/poster/2025/07/06/animevsub-vl15xV027j.jpg"
+                    alt="anime1"
+                  />
+                  <div class="trends__card-play anime-update__item-play">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                  <div
+                    class="trends__card-overlay anime-update__item-overlay"
+                  ></div>
+                  <div class="trends__card-rating anime-update__item-rating">
+                    <i class="fa-solid fa-star"></i>8.8
+                  </div>
+                  <div class="trends__card-episode anime-update__item-episode">
+                    TẬP 12
+                  </div>
+                  <p class="anime-update__item-title">Watari-kun</p>
+                  <p class="anime-update__item-view">Lượt xem: 142,195</p>
+                </li>
+                <li class="trends__card anime-update__item">
+                  <img
+                    src="https://cdn.animevietsub.cam/data/poster/2025/07/06/animevsub-vl15xV027j.jpg"
+                    alt="anime1"
+                  />
+                  <div class="trends__card-play anime-update__item-play">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                  <div
+                    class="trends__card-overlay anime-update__item-overlay"
+                  ></div>
+                  <div class="trends__card-rating anime-update__item-rating">
+                    <i class="fa-solid fa-star"></i>8.8
+                  </div>
+                  <div class="trends__card-episode anime-update__item-episode">
+                    TẬP 12
+                  </div>
+                  <p class="anime-update__item-title">Watari-kun</p>
+                  <p class="anime-update__item-view">Lượt xem: 142,195</p>
+                </li>
+                <li class="trends__card anime-update__item">
+                  <img
+                    src="https://cdn.animevietsub.cam/data/poster/2025/07/06/animevsub-vl15xV027j.jpg"
+                    alt="anime1"
+                  />
+                  <div class="trends__card-play anime-update__item-play">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                  <div
+                    class="trends__card-overlay anime-update__item-overlay"
+                  ></div>
+                  <div class="trends__card-rating anime-update__item-rating">
+                    <i class="fa-solid fa-star"></i>8.8
+                  </div>
+                  <div class="trends__card-episode anime-update__item-episode">
+                    TẬP 12
+                  </div>
+                  <p class="anime-update__item-title">Watari-kun</p>
+                  <p class="anime-update__item-view">Lượt xem: 142,195</p>
+                </li>
+                <li class="trends__card anime-update__item">
+                  <img
+                    src="https://cdn.animevietsub.cam/data/poster/2025/07/06/animevsub-vl15xV027j.jpg"
+                    alt="anime1"
+                  />
+                  <div class="trends__card-play anime-update__item-play">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                  <div
+                    class="trends__card-overlay anime-update__item-overlay"
+                  ></div>
+                  <div class="trends__card-rating anime-update__item-rating">
+                    <i class="fa-solid fa-star"></i>8.8
+                  </div>
+                  <div class="trends__card-episode anime-update__item-episode">
+                    TẬP 12
+                  </div>
+                  <p class="anime-update__item-title">Watari-kun</p>
+                  <p class="anime-update__item-view">Lượt xem: 142,195</p>
+                </li>
+                <li class="trends__card anime-update__item">
+                  <img
+                    src="https://cdn.animevietsub.cam/data/poster/2025/07/06/animevsub-vl15xV027j.jpg"
+                    alt="anime1"
+                  />
+                  <div class="trends__card-play anime-update__item-play">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                  <div
+                    class="trends__card-overlay anime-update__item-overlay"
+                  ></div>
+                  <div class="trends__card-rating anime-update__item-rating">
+                    <i class="fa-solid fa-star"></i>8.8
+                  </div>
+                  <div class="trends__card-episode anime-update__item-episode">
+                    TẬP 12
+                  </div>
+                  <p class="anime-update__item-title">Watari-kun</p>
+                  <p class="anime-update__item-view">Lượt xem: 142,195</p>
+                </li>
+              </ul>
+            </div>
           </div>
+
+          <!-- Những phần khác: hôm này xem gì, stuff, ... -->
           <div class="content__stuff"></div>
         </div>
       </main>
