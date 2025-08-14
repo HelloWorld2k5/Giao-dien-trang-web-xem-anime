@@ -534,8 +534,7 @@ danh sách các anime */
 
 /* đây là phần danh sách anime mới cập nhật */
 .content__anime-update {
-  margin-top: 10px;
-  padding: 10px 10px;
+  margin-top: 25px;
   /* background-color: cyan; */
 }
 
@@ -581,15 +580,18 @@ danh sách các anime */
 .anime-update {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  row-gap: 10px;
+  justify-content: space-between;
   list-style-type: none;
   padding: 0;
   margin-top: 20px;
+  /* background-color: purple; */
 }
 
 .anime-update__item {
   /* background-color: violet; */
   height: 250px;
+  flex: 0 0 calc(20% - 20px);
 }
 
 .anime-update__item:hover .anime-update__item-title {
@@ -622,3 +624,23 @@ danh sách các anime */
   color: #7d7d7d;
   font-size: 75%;
 }
+
+/* Đây là nút xem thêm của phần anime cập nhật */
+.btn-update {
+  outline: none;
+  border: none;
+  width: 100%;
+  margin-top: 15px;
+  padding: 9px 10px;
+  font-size: 120%;
+  text-align: center;
+  background-color: #171e21;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.btn-update:hover {
+  color: #7d7d7d;
+  cursor: pointer;
+}
+
