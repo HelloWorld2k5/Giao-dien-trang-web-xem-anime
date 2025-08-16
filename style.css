@@ -1,14 +1,19 @@
 /* style.css */
 
-#root {
+:root {
   --text-color: #fff;
-  --bgr-color: rgba(16, 20, 22, 0.95);
-  --border-color: #bbe633;
+  --underline-color: #bbe633;
+  --font-family-base: "Alata", sans-serif;
+  --anime-content-gap: 25px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
   box-sizing: border-box;
-  font-family: "Alata", sans-serif;
+  font-family: var(--font-family-base);
   font-weight: 100;
   margin: 0;
 }
@@ -55,7 +60,7 @@ body {
 
 .container__menu li {
   padding: 5px 8px;
-  color: #fff;
+  color: var(--text-color);
   font-size: 95%;
   cursor: pointer;
   position: relative;
@@ -69,7 +74,7 @@ body {
   bottom: 1px;
   width: 0%;
   height: 3px;
-  background-color: #bbe633;
+  background-color: var(--underline-color);
   transition: width 0.3s ease;
 }
 
@@ -89,13 +94,13 @@ body {
   top: 110%;
   left: 7px;
   min-width: 390px;
-  background-color: #fff;
+  background-color: var(--text-color);
   display: none;
   flex-flow: wrap row;
   z-index: 999;
   list-style-type: none;
   padding: 0;
-  border-top: 3px solid #bbe633;
+  border-top: 3px solid var(--underline-color);
   animation: show 0.2s ease-in-out alternate;
   padding: 7px 0 10px 10px;
 }
@@ -138,8 +143,8 @@ body {
   outline: none;
   border: none;
   background-color: #0b0e0f;
-  color: #fff;
-  caret-color: #fff;
+  color: var(--text-color);
+  caret-color: var(--text-color);
   font-weight: bold;
   min-width: 200px;
   padding: 0 10px;
@@ -151,7 +156,7 @@ body {
 
 /* set chữ cho placeholder khi focus input*/
 .container__search-input:focus::placeholder {
-  color: #fff;
+  color: var(--text-color);
 }
 
 .container__btn {
@@ -162,7 +167,7 @@ body {
   width: 100px;
   background-color: #ae200b;
   transition: background-color 0.3s ease;
-  color: #fff;
+  color: var(--text-color);
   border-radius: 3px;
 }
 
@@ -201,7 +206,7 @@ body {
 }
 
 .notification__header i {
-  color: #fff;
+  color: var(--text-color);
 }
 
 .notification__content {
@@ -218,7 +223,7 @@ body {
 .item {
   font-size: 90%;
   background-color: #453b3a;
-  color: #fff;
+  color: var(--text-color);
   border-radius: 10px;
   padding: 10px 5px;
   display: flex;
@@ -240,7 +245,7 @@ body {
 
 .item__link a {
   text-decoration: none;
-  color: #fff;
+  color: var(--text-color);
   padding: 5px 10px;
   border-radius: 20px;
   font-size: 85%;
@@ -355,7 +360,7 @@ body {
   position: absolute;
   top: 10px;
   right: 10px;
-  color: #fff;
+  color: var(--text-color);
   font-size: 75%;
   word-wrap: break-word;
   max-width: 40px;
@@ -376,7 +381,7 @@ body {
   padding: 0 10px;
   width: 100%;
   font-size: 85%;
-  color: #fff;
+  color: var(--text-color);
 }
 
 /* phần nội dung chính của trang 
@@ -466,7 +471,7 @@ danh sách các anime */
 }
 
 .card__title {
-  color: #fff;
+  color: var(--text-color);
   line-height: 30px;
 }
 
@@ -495,7 +500,7 @@ danh sách các anime */
 .card__studio span,
 .card__categories span,
 .card__btn {
-  color: #fff;
+  color: var(--text-color);
 }
 
 .card__description {
@@ -534,8 +539,7 @@ danh sách các anime */
 
 /* đây là phần danh sách anime mới cập nhật */
 .content__anime-update {
-  margin-top: 25px;
-  /* background-color: cyan; */
+  margin-top: var(--anime-content-gap);
 }
 
 .header-update {
@@ -564,17 +568,14 @@ danh sách các anime */
   transition: opacity 0.3 ease;
 }
 
-#all:hover,
-#summer-2025:hover,
-#series:hover,
-#mono:hover,
-#donghua:hover {
+.header-update__menu li:hover {
   opacity: 0.7;
   cursor: pointer;
 }
 
-#all {
-  color: red;
+/* Lấy thẻ li đầu tiên nhưng không được????? */
+.header-update__menu:first-child {
+  color: #e94621;
 }
 
 .anime-update {
@@ -585,11 +586,9 @@ danh sách các anime */
   list-style-type: none;
   padding: 0;
   margin-top: 20px;
-  /* background-color: purple; */
 }
 
 .anime-update__item {
-  /* background-color: violet; */
   height: 250px;
   flex: 0 0 calc(20% - 20px);
 }
@@ -644,3 +643,37 @@ danh sách các anime */
   cursor: pointer;
 }
 
+/* Đây là phần anime sắp chiếu */
+.content__anime-release {
+  margin-top: var(--anime-content-gap);
+}
+
+.anime-release__year,
+.anime-release__label {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.anime-release__year {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  color: var(--text-color);
+  font-size: 200%;
+}
+
+.anime-release__label {
+  position: absolute;
+  color: var(--text-color);
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  font-size: 90%;
+}
+
+/* Đây là phần của anime đề cử */
+.content-anime-recommend {
+  margin-top: var(--anime-content-gap);
+}

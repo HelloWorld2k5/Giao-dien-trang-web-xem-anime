@@ -18,3 +18,7 @@ if (cards) {
 else {
   console.log("No cards");
 }
+
+window.scrollTo({
+  behavior: "smooth"
+})
